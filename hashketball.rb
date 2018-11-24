@@ -169,9 +169,9 @@ result = []
     team[:players].each do |name, stats|
       if team[:team_name] == team_name
         result << team[:players][name][:number]
-end
-end
-end
+      end
+    end
+  end
 return result
 end
 
