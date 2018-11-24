@@ -163,7 +163,7 @@ team << game_hash[:home][:team_name]
 team << game_hash[:away][:team_name]
 end
 
-def player_numbers(name)
+def player_numbers(game_hash)
   game_hash.map do |team, players|
     players.map do |players, name|
       [:number]
