@@ -168,6 +168,8 @@ def player_numbers(name)
     players.map do |players, name|
       [:number]
 end
+end
+end
 
 def player_stats(name)
   if game_hash[:home][:players].has_key?(name)
