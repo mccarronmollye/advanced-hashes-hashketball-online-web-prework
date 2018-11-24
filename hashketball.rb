@@ -163,12 +163,16 @@ team << game_hash[:home][:team_name]
 team << game_hash[:away][:team_name]
 end
 
-def player_numbers(name)
-  game_hash.map do |team, players|
-    players.map do |players, name|
-      [:number]
+def player_numbers(team_name)
+result = []
+  game_hash.each do |orgin, team|
+    team[:players].each do |name, stats|
+      if team[:team_name] = team_name
+        result << team[:players][name][:number]
 end
 end
+end
+return result
 end
 
 def player_stats(name)
